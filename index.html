@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Madina Hotel | Order Online</title>
+<style>
+:root{--green:#126b45;--green2:#0b4d32;--gold:#e6b84b;--cream:#fffaf0;--ink:#202820;--muted:#66736a;--line:#e5e8e2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f8f4;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(120deg,#073c29,#14764c);color:white;padding:22px 16px 26px}
+.wrap{max-width:1120px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border-radius:16px;background:var(--gold);color:#183b2a;display:grid;place-items:center;font-size:27px}
+h1{font-family:Georgia,serif;font-size:clamp(25px,5vw,38px);margin:0;letter-spacing:.4px}.tag{color:#d8e9df;margin:5px 0 0;font-size:13px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.nav a{color:white;text-decoration:none;border:1px solid #ffffff55;padding:9px 13px;border-radius:999px;font-size:14px}
+.hero{padding:24px 0 6px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.hero h2{margin:0 0 7px;font-size:clamp(22px,4vw,30px)}.hero p{margin:0;color:#e1f0e7}.badge{background:#ffffff16;border:1px solid #ffffff44;border-radius:14px;padding:12px 15px;font-size:14px}
+main{max-width:1120px;margin:0 auto;padding:20px 16px 60px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 22px}.toolbar input,.toolbar select{background:white;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;min-width:0}.toolbar input{flex:1;min-width:190px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:24px 0 13px}.section-title h2{margin:0;font-size:23px}.section-title small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:16px;box-shadow:0 3px 12px #173f2510;display:flex;flex-direction:column;min-height:156px}.card .emoji{font-size:28px;margin-bottom:9px}.card h3{font-size:16px;margin:0 0 6px}.card .desc{font-size:12px;color:var(--muted);margin:0 0 12px;flex:1}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:800;color:var(--green);font-size:17px}.btn{border:0;border-radius:10px;padding:10px 13px;font-weight:750;cursor:pointer;font:inherit}.btn-primary{background:var(--green);color:white}.btn-primary:hover{background:var(--green2)}.btn-light{background:#edf5ef;color:var(--green)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:30px;box-shadow:0 3px 12px #173f2508}.panel h2{margin:0 0 5px}.subtext{color:var(--muted);font-size:14px;margin:0 0 17px}.cart-empty{color:var(--muted);padding:18px 0}.cart-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cart-row:last-child{border-bottom:0}.cart-name{font-weight:700}.cart-unit{font-size:12px;color:var(--muted);margin-top:3px}.qty{display:flex;align-items:center;gap:8px}.qty button{width:30px;height:30px;border:1px solid var(--line);background:#f6f8f5;border-radius:8px;font-size:17px;cursor:pointer}.line-total{font-weight:750;white-space:nowrap}.summary{max-width:430px;margin:14px 0 0 auto;border-top:1px solid var(--line);padding-top:12px}.sumrow{display:flex;justify-content:space-between;padding:5px 0}.sumrow.total{font-size:19px;font-weight:850;color:var(--green);border-top:1px dashed var(--line);margin-top:7px;padding-top:12px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700}.field input,.field textarea{width:100%;border:1px solid #dce2da;border-radius:11px;padding:12px;font:inherit;background:#fff}.field textarea{min-height:84px;resize:vertical}.hint{font-size:12px;color:var(--muted)}.error{color:#b42318;font-size:13px;margin:10px 0;display:none}.order-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.notice{font-size:12px;color:var(--muted);line-height:1.55;margin-top:12px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#173f2b;color:white;padding:11px 16px;border-radius:12px;box-shadow:0 5px 20px #0002;display:none;z-index:9;max-width:90vw}
+footer{text-align:center;padding:22px 14px;background:#edf2ec;color:#56645a;font-size:13px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.cart-row{grid-template-columns:1fr auto}.line-total{grid-column:2;grid-row:2}.qty{grid-column:1;grid-row:2}.hero{align-items:flex-start}.badge{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><div class="logo">🍽️</div><div><h1>City Madina Hotel</h1><p class="tag">Authentic traditional flavours · Family restaurant</p></div></div>
+      <a class="nav" href="#cart" style="margin-top:0"><span>🛒 Cart (<b id="cartCount">0</b>)</span></a>
+    </div>
+    <nav class="nav"><a href="#menu">Food Menu</a><a href="#cart">Your Cart</a><a href="#checkout">Checkout</a></nav>
+    <div class="hero"><div><h2>Good food, just a few taps away.</h2><p>Choose your favourites and place your order through WhatsApp.</p></div><div class="badge">🧾 <b>5% GST</b> added at checkout<br>📱 Indian mobile number: exactly 10 digits</div></div>
+  </div>
+</header>
+<main>
+  <div class="toolbar"><input id="search" type="search" placeholder="Search dishes…"><select id="category"><option value="all">All categories</option></select></div>
+  <div class="section-title" id="menu"><h2>Our Menu</h2><small>Prices in ₹ (INR)</small></div>
+  <div id="menuGrid" class="grid"></div>
+  <section class="panel" id="cart">
+    <h2>🛒 Your Cart</h2><p class="subtext">Items you add from the menu appear here. Change quantities or remove items before checkout.</p>
+    <div id="cartItems" class="cart-empty">Your cart is empty. Add something delicious from the menu!</div>
+    <div id="cartSummary" class="summary" hidden>
+      <div class="sumrow"><span>Subtotal</span><strong id="subtotal">₹0.00</strong></div>
+      <div class="sumrow"><span>GST (5%)</span><strong id="gst">₹0.00</strong></div>
+      <div class="sumrow total"><span>Total payable</span><strong id="total">₹0.00</strong></div>
+      <div style="text-align:right;margin-top:12px"><button class="btn btn-primary" onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">Proceed to Checkout →</button></div>
+    </div>
+  </section>
+  <section class="panel" id="checkout">
+    <h2>📦 Checkout</h2><p class="subtext">Enter your details. Tapping the order button opens WhatsApp with your order ready to send to City Madina Hotel.</p>
+    <form id="checkoutForm">
+      <div class="form-grid">
+        <div class="field"><label for="customerName">Customer name *</label><input id="customerName" required maxlength="80" placeholder="Your full name"></div>
+        <div class="field"><label for="phone">Mobile number *</label><input id="phone" required inputmode="numeric" autocomplete="tel-national" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="10-digit mobile number"><span class="hint">Enter exactly 10 digits, without +91.</span></div>
+        <div class="field full"><label for="address">Delivery address *</label><textarea id="address" required maxlength="400" placeholder="House/flat, street, area and landmark"></textarea></div>
+        <div class="field full"><label for="notes">Order notes (optional)</label><input id="notes" maxlength="250" placeholder="Any special instructions"></div>
+      </div>
+      <div id="formError" class="error" role="alert"></div>
+      <div class="order-actions"><button class="btn btn-primary" type="submit">Place Order on WhatsApp</button><button class="btn btn-light" type="button" onclick="clearCart()">Clear Cart</button></div>
+      <p class="notice">WhatsApp order delivery: after WhatsApp opens, review the message and tap <b>Send</b> to submit it. This website does not automatically send messages or confirm an order until you send it in WhatsApp.</p>
+    </form>
+  </section>
+</main>
+<footer>City Madina Hotel · Thank you for ordering with us!</footer>
+<div id="toast" class="toast" role="status"></div>
+<script>
+const WHATSAPP_NUMBER = "919980314910";
+const menu = [
+["Roti","Kerala Parota",20],["Roti","Ceylon Parota",30],["Roti","Rumali Roti",20],
+["Rice","Chicken Biryani",160],["Rice","Mutton Biryani",230],["Rice","Chicken Rice",80],["Rice","Chicken Rice - Half",50],["Rice","Biryani Rice",100],["Rice","Biryani Rice - Half",70],["Rice","Chicken Fried Rice",170],["Rice","Egg Fried Rice",140],["Rice","Veg Fried Rice",120],
+["Starters","Chicken Kebab Full",240],["Starters","Chicken Kebab Half",120],["Starters","Chicken Grilled Full",470],["Starters","Chicken Grilled Half",240],["Starters","Chicken Leg Piece",70],["Starters","Chicken Lollipop Full",400],["Starters","Chicken Lollipop Half",200],
+["Chicken Gravy","Chicken Masala",200],["Chicken Gravy","Chicken Kadai",200],["Chicken Gravy","Chicken Handi",200],["Chicken Gravy","Chicken Hyderabadi",200],["Chicken Gravy","Chicken Kolhapuri",200],["Chicken Gravy","Chicken Pahadi",200],["Chicken Gravy","Chicken Khandani",200],["Chicken Gravy","Butter Chicken",200],["Chicken Gravy","Chicken Kalimirch",200],
+["Chicken Dry","Chicken Manchurian",200],["Chicken Dry","Chicken 65",200],["Chicken Dry","Chicken Pepper Dry",200],["Chicken Dry","Chicken Chilly",200],["Chicken Dry","Lemon Chicken",200],["Chicken Dry","Dragon Chicken Boneless Full",440],["Chicken Dry","Dragon Chicken Boneless Half",220],
+["Special Dry","Tandoori Full",400],["Special Dry","Tandoori Half",250],["Special Dry","Lollipop Wings (Chicken)",400],
+["Shawarma","Shawarma Roll",90],["Shawarma","Shawarma Roll - Special",120],["Shawarma","Shawarma Roll - Jumbo",150],["Shawarma","Chicken Shawarma",110],["Shawarma","Shawarma Sandwich",110],["Shawarma","Chicken Shawarma",110],["Shawarma","Chicken Shawarma with Cheese",130],["Shawarma","Pickle Shawarma",140],["Shawarma","Paneer Shawarma",100],["Shawarma","Paneer Shawarma with Cheese",120],
+["Mutton Gravy","Mutton Masala",230],["Mutton Gravy","Mutton Kadai",230],["Mutton Gravy","Mutton Hyderabadi",230],["Mutton Gravy","Mutton Kolhapuri",230],["Mutton Gravy","Mutton Pahadi",230],["Mutton Gravy","Mutton Handi",230],["Mutton Gravy","Mutton Kalimirch",230],["Mutton Gravy","Mutton Pepper Dry",230],
+["Paneer Gravy","Paneer Butter Masala",170],["Paneer Gravy","Paneer Kadai",170],["Paneer Gravy","Paneer Khurma",170],["Paneer Gravy","Paneer Hyderabadi",170],["Paneer Gravy","Paneer Kolhapuri",170],["Paneer Gravy","Paneer Pahadi",170],
+["Paneer Dry","Paneer Manchurian",180],["Paneer Dry","Paneer Chilly",180],["Paneer Dry","Paneer 65",180],["Paneer Dry","Paneer Pepper Dry",180],
+["Cold Drinks","Cold Drink - 300 ml",20],["Cold Drinks","Cold Drink - 450 ml",40],["Cold Drinks","Cold Drink - 750 ml",50],["Cold Drinks","Cold Drink - 2.25 litre",100],
+["Water","Mineral Water - 500 ml",10],["Water","Mineral Water - 1 litre",20]
+].map((x,i)=>({id:i,category:x[0],name:x[1],price:x[2]}));
+const cart = {};
+const money = n => "₹" + n.toFixed(2);
+const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function renderCategories(){
+ document.getElementById('category').innerHTML='<option value="all">All categories</option>'+[...new Set(menu.map(x=>x.category))].map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+}
+function renderMenu(){
+ const q=document.getElementById('search').value.toLowerCase().trim(), cat=document.getElementById('category').value;
+ const items=menu.filter(x=>(cat==='all'||x.category===cat)&&(`${x.name} ${x.category}`).toLowerCase().includes(q));
+ document.getElementById('menuGrid').innerHTML=items.map(x=>`<article class="card"><div class="emoji">${x.category.includes('Drink')||x.category==='Water'?'🥤':x.category==='Roti'?'🫓':x.category.includes('Rice')?'🍚':x.category.includes('Shawarma')?'🌯':x.category.includes('Paneer')?'🧀':'🍗'}</div><h3>${esc(x.name)}</h3><p class="desc">${esc(x.category)}</p><div class="card-bottom"><span class="price">${money(x.price)}</span><button class="btn btn-primary" onclick="addItem(${x.id})">+ Add to Cart</button></div></article>`).join('')||'<p>No dishes found. Try another search.</p>';
+}
+function addItem(id){cart[id]=(cart[id]||0)+1;renderCart();toast(menu[id].name+' added to cart');}
+function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart();}
+function clearCart(){Object.keys(cart).forEach(k=>delete cart[k]);renderCart();}
+function renderCart(){
+ const ids=Object.keys(cart);document.getElementById('cartCount').textContent=ids.reduce((s,k)=>s+cart[k],0);
+ const el=document.getElementById('cartItems'), summary=document.getElementById('cartSummary');
+ if(!ids.length){el.className='cart-empty';el.textContent='Your cart is empty. Add something delicious from the menu!';summary.hidden=true;return;}
+ el.className='';el.innerHTML=ids.map(k=>{const x=menu[+k];return `<div class="cart-row"><div><div class="cart-name">${esc(x.name)}</div><div class="cart-unit">${money(x.price)} each</div></div><div class="qty"><button aria-label="Decrease ${esc(x.name)}" onclick="changeQty(${x.id},-1)">−</button><b>${cart[k]}</b><button aria-label="Increase ${esc(x.name)}" onclick="changeQty(${x.id},1)">+</button></div><div class="line-total">${money(x.price*cart[k])} <button class="btn btn-light" style="padding:4px 7px;margin-left:4px" onclick="changeQty(${x.id},-${cart[k]})" aria-label="Remove ${esc(x.name)}">✕</button></div></div>`}).join('');
+ const sub=ids.reduce((s,k)=>s+menu[+k].price*cart[k],0),gst=sub*.05,total=sub+gst;
+ document.getElementById('subtotal').textContent=money(sub);document.getElementById('gst').textContent=money(gst);document.getElementById('total').textContent=money(total);summary.hidden=false;
+}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display='none',1800);}
+document.getElementById('search').addEventListener('input',renderMenu);document.getElementById('category').addEventListener('change',renderMenu);
+document.getElementById('phone').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,10);});
+document.getElementById('checkoutForm').addEventListener('submit',e=>{
+ e.preventDefault();const error=document.getElementById('formError');error.style.display='none';
+ const ids=Object.keys(cart);if(!ids.length){error.textContent='Your cart is empty. Please add at least one item.';error.style.display='block';document.getElementById('cart').scrollIntoView({behavior:'smooth'});return;}
+ const name=document.getElementById('customerName').value.trim(),phone=document.getElementById('phone').value,address=document.getElementById('address').value.trim(),notes=document.getElementById('notes').value.trim();
+ if(!/^[0-9]{10}$/.test(phone)){error.textContent='Please enter a mobile number containing exactly 10 digits.';error.style.display='block';document.getElementById('phone').focus();return;}
+ const sub=ids.reduce((s,k)=>s+menu[+k].price*cart[k],0),gst=sub*.05,total=sub+gst;
+ const lines=ids.map(k=>`• ${menu[+k].name} × ${cart[k]} = ₹${(menu[+k].price*cart[k]).toFixed(2)}`);
+ const msg=`*NEW ORDER — CITY MADINA HOTEL*%0A%0ACustomer: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0ADelivery address: ${encodeURIComponent(address)}%0A%0A*Items*%0A${encodeURIComponent(lines.join('\n'))}%0A%0ASubtotal: ₹${sub.toFixed(2)}%0AGST (5%): ₹${gst.toFixed(2)}%0A*TOTAL: ₹${total.toFixed(2)}*${notes?'%0AOrder notes: '+encodeURIComponent(notes):''}`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,'_blank','noopener');
+});
+renderCategories();renderMenu();renderCart();
+</script>
+</body>
+</html>
